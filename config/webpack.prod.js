@@ -22,7 +22,7 @@ module.exports = merge(common, {
             ]
         }),
         new HtmlWebpackPlugin({
-            title: 'Prod::App',
+            title: 'Lira Holding',
             filename: 'index.html',
             publicPath: path.resolve(__dirname, '../public'),
             template: path.resolve(__dirname, './index.html'),
