@@ -1,0 +1,157 @@
+.partners {
+  display: flex;
+  height: 908px;
+
+  .col {
+    flex: 1 1 50%;
+    width: 50%;
+  }
+
+  h1 {
+    font-size: 72px;
+    font-weight: bold;
+    line-height: 120px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--iqwik-dark);
+    margin-bottom: 60px;
+  }
+
+  .dot {
+    color: var(--iqwik-yellow);
+  }
+
+  .leftSide {
+    background-color: var(--iqwik-gray-light);
+    padding: 7% 8% 10% 15%;
+    //padding: var(--padding) var(--left-offset);
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+
+      .rectangle {
+        width: 100%;
+        height: 100%;
+        background-color: var(--bs-white);
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          object-fit: contain;
+          max-width: 100%;
+          filter: grayscale(1);
+          transition: filter .5s ease-in-out;
+        }
+
+        &:hover {
+          img {
+            filter: grayscale(0);
+          }
+        }
+      }
+    }
+  }
+
+  .rightSide {
+    background-color: var(--iqwik-yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .innerRectangle {
+      position: relative;
+      width: 427px;
+      height: 470px;
+
+      .logo {
+        display: flex;
+
+        svg {
+          width: 301px;
+          height: 301px;
+          margin: auto;
+        }
+      }
+
+      p {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 25px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      .button {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+  }
+
+  @media (max-width: 1360px) {
+    .leftSide {
+      padding: 7% 8% 10% 10%;
+    }
+  }
+
+  @media (max-width: $mob-size) {
+    display: block;
+    height: 100%;
+
+    .col {
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 33px;
+      line-height: 80px;
+      margin-bottom: 10px;
+    }
+
+    .leftSide, .rightSide {
+      padding: 25px;
+    }
+
+    .rightSide {
+      .innerRectangle {
+        width: 100%;
+        height: 100%;
+
+        .logo {
+          svg {
+            width: 128px;
+            height: 128px;
+          }
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        .button {
+          position: relative;
+          margin: 20px auto auto;
+          display: block;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .leftSide {
+      .grid {
+        max-width: 480px;
+        justify-content: center;
+      }
+    }
+  }
+}

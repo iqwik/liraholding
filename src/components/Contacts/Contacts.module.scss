@@ -1,0 +1,135 @@
+.contacts {
+  display: flex;
+  height: calc(908px - var(--header-height));
+
+  .col {
+    flex: 1 1 50%;
+    width: 50%;
+  }
+
+  .leftSide {
+    padding: var(--padding) var(--left-offset);
+
+    h1 {
+      font-size: 72px;
+      line-height: 120px;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--iqwik-dark);
+      margin-bottom: 70px;
+
+      span {
+        color: var(--iqwik-yellow);
+      }
+    }
+
+    .list {
+      list-style-type: none;
+      margin: 0 0 30px 0;
+      padding: 0;
+
+      li {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 35px;
+        color: var(--iqwik-dark);
+      }
+    }
+  }
+
+  .rightSide {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: var(--padding);
+
+    .subscribe {
+      width: 380px;
+
+      h4 {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 35px;
+        color: var(--iqwik-dark);
+      }
+
+      .row {
+        display: flex;
+
+        .input {
+          padding: 13px 19px;
+          width: 315px;
+          border-radius: 25px;
+          border-width: 0;
+          margin-right: 17px;
+
+          &:focus {
+            color: var(--iqwik-dark);
+            background-color: var(--bs-white);
+            border-width: 0;
+            outline: 0;
+            box-shadow: none;
+          }
+        }
+
+        .subscribeButton {
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1360px) {
+    .leftSide {
+      padding: 8% 15%;
+    }
+  }
+
+  @media (max-width: $mob-size) {
+    display: block;
+    height: 100%;
+
+    .col {
+      width: 100%;
+    }
+
+    .leftSide {
+      padding: 25px;
+
+      h1 {
+        font-size: 33px;
+        line-height: 35px;
+        margin-bottom: 34px;
+      }
+
+      .list {
+        text-align: center;
+
+        li {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+
+      button {
+        display: block;
+        margin: auto;
+      }
+    }
+
+    .rightSide {
+      padding: 25px;
+
+      .subscribe {
+        width: 100%;
+
+        h4 {
+          font-size: 14px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

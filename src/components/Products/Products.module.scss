@@ -1,0 +1,8 @@
+.products {
+  //height: 908px;
+  height: 100%;
+
+  @media (max-width: $mob-size) {
+    height: 100%;
+  }
+}

@@ -1,0 +1,50 @@
+.dialog {
+  background-color: var(--bs-white);
+  height: 100%;
+  display: flex;
+
+  .col {
+    flex: 1 1 50%;
+    width: 50%;
+  }
+
+  .close {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    font-size: 25px;
+    padding: 0;
+  }
+
+  .leftSide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .close {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mob-size) {
+    display: block;
+
+    .leftSide {
+      width: 100%;
+      height: 100%;
+
+      .close {
+        display: block;
+        top: 0;
+        opacity: 1;
+      }
+    }
+
+    .rightSide {
+      display: none;
+      .close {
+        display: none;
+      }
+    }
+  }
+}

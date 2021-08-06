@@ -1,0 +1,44 @@
+@import "assets/styles/_mixins";
+@import "assets/styles/_variables";
+@include font("Gilroy", "Gilroy-Light", "Gilroy-Light", light, 400);
+@include font("Gilroy", "Gilroy-Regular", "Gilroy-Regular", normal, 500);
+@include font("Gilroy", "Gilroy-Bold", "Gilroy-Bold", bold, 700);
+
+:root {
+  --iqwik-yellow: #EFBD28;
+  --iqwik-gray-light: #F2F2F2;
+  --iqwik-gray: #806F76;
+  --iqwik-dark-light: rgba(0, 0, 0, .5);
+  --iqwik-dark-medium: rgba(0, 0, 0, .75);
+  --iqwik-dark: rgba(0, 0, 0, 1);
+  --white-light: rgba(255, 255, 255, 0.8);
+  --iqwik-pink: #FFDEEC;
+  --common-offset: 110px;
+  --logo-size: 149px;
+  --header-height: 82px;
+  --header-height-mob: 60px;
+  --left-offset: 250px;
+  --padding: 100px;
+  --mob-offset: 25px;
+  --mob-size: 1190px;
+}
+
+html, body, #app {
+  height: 100%;
+}
+
+body {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--iqwik-dark);
+
+  @media (max-width: $mob-size) {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+@import "assets/styles/buttons";

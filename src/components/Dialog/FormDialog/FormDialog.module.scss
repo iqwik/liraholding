@@ -1,0 +1,59 @@
+.formDialog {
+  max-width: 470px;
+  width: 100%;
+  padding: 25px;
+
+  h4 {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+
+  > div {
+    margin-bottom: 20px;
+
+    &:nth-child(4) {
+      margin-bottom: 40px;
+    }
+  }
+
+  input, textarea {
+    width: 100%;
+    border-color: var(--iqwik-dark);
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+      border-color: var(--iqwik-dark);
+    }
+  }
+
+  button {
+    display: block;
+    margin: auto;
+  }
+
+  .errorBorder, .error {
+    color: var(--bs-red);
+  }
+
+  .errorBorder {
+    border-color: var(--bs-red);
+  }
+
+  @media (max-width: $mob-size) {
+    h4 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+  }
+
+  > div {
+    &:nth-child(4) {
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "target": "es2017",
+        "allowSyntheticDefaultImports": false,
+        "baseUrl": "./",
+        "paths": {
+            "Assets/*": ["src/assets/*"],
+            "API/*": ["src/api/*"],
+            "Redux/*": ["src/redux/*"],
+            "Styles/*": ["src/assets/styles/*"]
+        },
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "sourceMap": true
+    },
+    "exclude": [
+        "node_modules",
+        "public"
+    ]
+}

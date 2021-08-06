@@ -1,0 +1,323 @@
+.container {
+  display: flex;
+  //height: 908px;
+  height: 100%;
+
+  .col {
+    flex: 1 1 50%;
+  }
+
+  .leftSide {
+    background-color: var(--iqwik-yellow);
+
+    .wrapper {
+      position: relative;
+      //margin: var(--padding) var(--left-offset);
+      margin: 15% 25%;
+      //height: calc(100% - var(--padding) * 2);
+      height: calc(100% - 15% * 2);
+
+      .h1 {
+        font-weight: 800;
+        font-size: 72px;
+        line-height: 120px;
+        text-transform: uppercase;
+        margin-bottom: 60px;
+
+        .dot {
+          color: var(--bs-white);
+        }
+      }
+
+      .h4 {
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 35px;
+        color: var(--bs-white);
+        margin-bottom: 20px;
+      }
+
+      .button {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+
+  .rightSide {
+    position: relative;
+    //padding: 80px var(--padding);
+    //padding: 4% 5%;
+    padding: 4% 5% calc(4% + 286px);
+
+    .benefits {
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+
+      li {
+        position: relative;
+        flex: 1 1 calc(50% - 50px);
+        width: 300px;
+        height: 265px;
+        padding: 0 0 0 30px;
+        margin: 0 25px 25px 0;
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background-color: var(--iqwik-dark);
+          top: 10px;
+          left: 13px;
+        }
+
+        h3 {
+          font-size: 20px;
+          font-weight: bold;
+          line-height: 25px;
+          margin: 0 0 10px 0;
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    .features {
+      position: absolute;
+      width: 100%;
+      height: 286px;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: var(--iqwik-pink);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 100px 70px;
+
+      .feature {
+        position: relative;
+        flex: 1 1 30%;
+        display: flex;
+        align-items: center;
+        padding-left: 25px;
+        padding-right: 25px;
+
+        .featureText {
+          color: var(--iqwik-gray);
+          font-size: 18px;
+          font-weight: bold;
+          line-height: 22px;
+          text-transform: uppercase;
+          width: 100px;
+          margin-left: 20px;
+        }
+
+        &:nth-child(1) {
+          padding-left: 0;
+        }
+        &:nth-child(1), &:nth-child(2) {
+          &:after {
+            content: '';
+            position: absolute;
+            display: flex;
+            align-items: center;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            height: 150%;
+            width: 3px;
+            background-color: var(--iqwik-yellow);
+          }
+        }
+        &:nth-child(2) {
+          &:after {
+            right: 10px;
+          }
+        }
+
+        &:nth-child(3) {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1700px) {
+    .rightSide {
+      .benefits {
+        li {
+          height: auto;
+        }
+      }
+
+      .features {
+        padding: 5% 2.5%;
+
+        .feature {
+          .featureText {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1398px) {
+    .rightSide {
+      .features {
+        flex-wrap: wrap;
+        padding: 5% 14%;
+
+        .feature {
+          flex: 1 1 50%;
+          width: 50%;
+          padding: 0;
+
+          &:nth-child(1), &:nth-child(2) {
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $mob-size) {
+    display: block;
+    height: auto;
+
+    .leftSide {
+      .wrapper {
+        margin: auto;
+        padding: 25px;
+
+        .h1 {
+          font-size: 33px;
+          line-height: 120px;
+          margin: 0;
+        }
+
+        .h4 {
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        p {
+          margin-bottom: 30px;
+        }
+
+        .button {
+          position: relative;
+          margin: auto auto 25px;
+          display: block;
+        }
+      }
+    }
+
+    .rightSide {
+      padding: 0;
+
+      .benefits {
+        display: block;
+        padding: 25px;
+        height: 290px;
+        position: relative;
+
+        li {
+          width: 100%;
+          height: 190px;
+
+          h3 {
+            font-size: 14px;
+            line-height: 20px;
+          }
+
+          p {
+            font-size: 12px;
+            line-height: 20px;
+          }
+        }
+
+        .showMore {
+          position: absolute;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          text-align: center;
+          padding: 15px 0 30px;
+          background-color: var(--bs-white);
+
+          .text {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 20px;
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+
+            &:after {
+              content: '';
+              position: absolute;
+              background: url('../../assets/img/arrow.png') no-repeat center;
+              background-size: cover;
+              width: 25px;
+              height: 25px;
+              right: 0;
+              left: 0;
+              bottom: -23px;
+              margin: auto;
+            }
+          }
+        }
+
+        &.isShown {
+          height: calc(100% + 65px);
+
+          .showMore {
+            .text {
+              &:after {
+                transform: rotate(180deg);
+                bottom: 20px;
+              }
+            }
+          }
+        }
+      }
+
+      .features {
+        position: relative;
+        flex-direction: column;
+        height: 100%;
+        padding: 25px;
+
+        .feature {
+          padding: 0;
+          margin-bottom: 39px;
+
+          &:nth-child(1), &:nth-child(2) {
+            &:after {
+              display: none;
+            }
+          }
+
+          &:nth-child(3) {
+            margin-bottom: 0;
+          }
+
+          .featureText {
+            margin-left: 13px;
+          }
+        }
+      }
+    }
+  }
+}

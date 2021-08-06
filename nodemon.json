@@ -1,0 +1,10 @@
+{
+    "watch": [
+        "config/webpack.common.js",
+        "config/webpack.dev.js",
+        "babel.config.js"
+    ],
+    "events": {
+        "restart": "yarn prunecache"
+    }
+}
